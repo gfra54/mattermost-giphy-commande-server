@@ -1,5 +1,7 @@
 <?php
-
+if(!$_SERVER['REQUEST_SCHEME']) {
+	$_SERVER['REQUEST_SCHEME']='https';
+}
 
 if($q = $_GET['text']) {
 	$url = 'https://api.giphy.com/v1/gifs/search?api_key=ZmkZAA15r7XsYDxj7cmvMZkVdPtsiPfl&q='.$q;
