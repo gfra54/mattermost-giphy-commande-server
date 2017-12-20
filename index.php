@@ -1,7 +1,7 @@
 <?php
 
 
-if($q = $_POST['text']) {
+if($q = $_GET['text']) {
 	$url = 'https://api.giphy.com/v1/gifs/search?api_key=ZmkZAA15r7XsYDxj7cmvMZkVdPtsiPfl&q='.$q;
 	$data = file_get_contents($url);
 	if($data = json_decode($data,true)) {
